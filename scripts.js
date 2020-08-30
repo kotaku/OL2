@@ -10,16 +10,14 @@ function loadJSON(callback) {
     xobj.send(null);
 }
 
-function init() {
+function checkAnswer(number, answers) {
     loadJSON(function (response) {
-        var actual_JSON = JSON.parse(response);
+        actualJSON = JSON.parse(response);
+        check(answers, actual_JSON.index[number])
     });
 }
 
-function checkAnswer(number, answers) {
-    init();
-    var question = actual_JSON.index[number];
-
+function check(answers, question) {
     if (Array.isArray(answers) &&
         Array.isArray(question.answers) &&
         answers.length === question.answers.length &&
