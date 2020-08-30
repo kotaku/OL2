@@ -10,19 +10,23 @@ function loadJSON(callback) {
     xobj.send(null);
 }
 
-function checkAnswer(number, answers) {
+function init() {
     loadJSON(function (response) {
         var actual_JSON = JSON.parse(response);
-        var question = actual_JSON.index[number];
-
-        if (Array.isArray(answers) &&
-            Array.isArray(question.answers) &&
-            answers.length === question.answers.length &&
-            answers.every((val, index) => val === question.answers[index])) {
-            return question.true;
-        }
-        else {
-            return question.false;
-        }
     });
+}
+
+function checkAnswer(number, answers) {
+    init();
+    var question = actual_JSON.index[number];
+
+    if (Array.isArray(answers) &&
+        Array.isArray(question.answers) &&
+        answers.length === question.answers.length &&
+        answers.every((val, index) => val === question.answers[index])) {
+        return question.true;
+    }
+    else {
+        return question.false;
+    }
 }
