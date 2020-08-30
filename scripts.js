@@ -12,17 +12,15 @@ function loadJSON(callback) {
 
 function checkAnswer(number, answers, callback) {
     loadJSON(function (response) {
-        var actualJSON = JSON.parse(response);
-        var question = actualJSON.index[number];
-
+        var question = JSON.parse(response)[number];
         if (Array.isArray(answers) &&
             Array.isArray(question.answers) &&
             answers.length === question.answers.length &&
             answers.every((val, index) => val === question.answers[index])) {
-            return callback(question.true);
+            callback(question.true);
         }
         else {
-            return callback(question.false);
+            callback(question.false);
         }
     });
 }

@@ -39,6 +39,10 @@ button:hover {
     top: 0px;
 }
 
+#mainFrame {
+    padding: 1%;
+}
+
 .center {
     display: block;
     margin: 0 auto;
