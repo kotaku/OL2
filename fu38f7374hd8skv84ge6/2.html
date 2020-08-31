@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Выберите вариант ответа, кликнув по нему мышкой</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Для чего используют регистры?</i></p>
+    <p><input name="answer" type="radio" value="1"><i>&emsp;для подсчета сигналов</i></p>
+    <p><input name="answer" type="radio" value="2"><i>&emsp;для хранения двоичного кода</i></p>
+    <p><input name="answer" type="radio" value="3"><i>&emsp;для перевода чисел между системами</i></p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(2, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>
