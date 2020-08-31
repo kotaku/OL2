@@ -1,13 +1,13 @@
 {
     "2": {
-        "asnswers": [
+        "answers": [
             2
         ],
         "true": "2right",
         "false": "2wrong"
     },
     "4": {
-        "asnswers": [
+        "answers": [
             3
         ],
         "true": 6,
