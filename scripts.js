@@ -37,7 +37,7 @@ function parseAnswer(callback) {
 }
 
 function changeFrame(number) {
-    document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/' + number + '.html');
+    parent.document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/' + number + '.html');
 }
 
 // for the future inplementation
