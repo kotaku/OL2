@@ -24,3 +24,35 @@ function checkAnswer(number, answers, callback) {
         }
     });
 }
+
+function parseAnswer(callback) {
+    var answer = document.getElementsByName('answer');
+    var parseArray = new Array();
+    for (var i = 0; i < answer.length; i++) {
+        if (answer[i].checked) {
+            parseArray.push(answer[i].value);
+        }
+    }
+    callback(parseArray);
+}
+
+function changeFrame(number) {
+    document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/' + number + '.html');
+}
+
+// for the future inplementation
+// to universal right/wrong pages
+// function changeFrame(number, pageType) {
+//     switch (pageType) {
+//         case 0:
+//             document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/right.html');
+//             document.getElementById("nextPage").setAttribute('onclick', 'changeFrame(' + number + ', 2)');
+//             break;
+//         case 1:
+//             document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/wrong.html');
+//             document.getElementById("nextPage").setAttribute('onclick', 'changeFrame(' + number + ', 2)');
+//             break;
+//         default:
+//             document.getElementById("mainFrame").setAttribute('src', 'fu38f7374hd8skv84ge6/' + number + '.html');
+//     }
+// }
