@@ -3,8 +3,8 @@
         "asnswers": [
             2
         ],
-        "true": 3,
-        "false": 1
+        "true": "2right",
+        "false": "2wrong"
     },
     "4": {
         "asnswers": [
