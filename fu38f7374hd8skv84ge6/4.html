@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Выберите правильный ответ для продолжения высказывания, щелкнув по нему мышкой</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Результат работы регистра зависит от...</i></p>
+    <p><label><input name="answer" type="radio" value="1"><i>&emsp;импульса, поданного на вход регистра
+                последним</i></label></p>
+    <p><label><input name="answer" type="radio" value="2"><i>&emsp;выходного сигнала, полученного по итогу выполнения
+                последней операции</i></label></p>
+    <p><label><input name="answer" type="radio" value="3"><i>&emsp;входных сигналов, поданных ранее и подаваемых в
+                данный момент</i></label></p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(4, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>
