@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>22</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Кликните мышкой на выбранный вариант</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Выберите вариант схемы, изображающий работу параллельного регистра</i></p>
+    <p><label><input name="answer" type="checkbox" value="1"><img height="20%" class="center"
+                src="img/22_1.png"></label>
+    </p>
+    <p><label><input name="answer" type="checkbox" value="2"><img height="10%" class="center"
+                src="img/22_2.png"></label>
+    </p>
+    <p><label><input name="answer" type="checkbox" value="3"><img height="20%" class="center"
+                src="img/22_3.png"></label>
+    </p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(22, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>

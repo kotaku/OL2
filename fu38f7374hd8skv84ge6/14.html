@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>14</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Кликните мышкой на выбранный вариант</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Выберите верные высказывания</i></p>
+    <p><label><input name="answer" type="checkbox" value="1"><i>&emsp;регистры классифицируют на два вида в зависимости
+                от их функционирования</i></label></p>
+    <p><label><input name="answer" type="checkbox" value="2"><i>&emsp;дним из признаков для классификации регистров
+                служит способ записи и считывания информации</i></label></p>
+    <p><label><input name="answer" type="checkbox" value="3"><i>&emsp;регистры бывают только параллельные и сдвиговые по
+                способу записи и считывания информации</i></label></p>
+    <p><label><input name="answer" type="checkbox" value="4"><i>&emsp;регистры бывают двух видов: последовательные и
+                сдвиговые</i></label></p>
+    <p><label><input name="answer" type="checkbox" value="5"><i>&emsp;регистры делятся на «регистры памяти» и «сдвиговые
+                регистры»</i></label></p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(14, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>

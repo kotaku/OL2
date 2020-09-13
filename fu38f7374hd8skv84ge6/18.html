@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>18</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Соотнесите понятие и определение</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Сдвиговый регистр – ...</i></p>
+    <p><label><input name="answer" type="radio" value="1"><i>&emsp;в нем запись (считывание) числа осуществляется
+                параллельным кодом, т.е. во все разряды регистра одновременно</i></label></p>
+    <p><label><input name="answer" type="radio" value="2"><i>&emsp;представляет собой схему, в которой внутренние
+                триггеры соединены последовательно, в нем по импульсу тактового сигнала происходит передвижение на один
+                разряд цифрового кода, который записан на входном выводе</i></label></p>
+    <p><i>&emsp;Регистр памяти – ...</i></p>
+    <p><label><input name="answer" type="radio" value="3"><i>&emsp;в нем запись (считывание) числа осуществляется
+                параллельным кодом, т.е. во все разряды регистра одновременно</i></label></p>
+    <p><label><input name="answer" type="radio" value="4"><i>&emsp;представляет собой схему, в которой внутренние
+                триггеры соединены последовательно, в нем по импульсу тактового сигнала происходит передвижение на один
+                разряд цифрового кода, который записан на входном выводе</i></label></p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(18, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>10</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="../scripts.js"></script>
+</head>
+
+<body>
+    <p>Кликните мышкой на выбранный вариант</p>
+    <hr color="#ffe712" size="3px">
+    <p><i>&emsp;Выберите, число из скольких разрядов можно записать в следующий регистр.</i></p>
+    <img height="20%" class="center" src="img/10.png">
+    <p><label><input name="answer" type="radio" value="1"><i>&emsp;Двухразрядное число</i></label></p>
+    <p><label><input name="answer" type="radio" value="2"><i>&emsp;Трехразрядное число</i></label></p>
+    <p><label><input name="answer" type="radio" value="3"><i>&emsp;Четырехразрядное число</i></label></p>
+    <div align="center">
+        <button onclick="parseAnswer(function(answer){
+            checkAnswer(10, answer, function(number){
+                changeFrame(number);
+                })
+            })">Проверить</button>
+    </div>
+</body>
+
+</html>
