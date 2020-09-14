@@ -25,6 +25,20 @@ function checkAnswer(number, answers, callback) {
     });
 }
 
+function checkAnswerAny(number, answers, callback) {
+    loadJSON(function (response) {
+        var question = JSON.parse(response)[number];
+        if (Array.isArray(answers) &&
+            Array.isArray(question.answers) &&
+            answers.some((val, index) => val === question.answers[index])) {
+            callback(question.true);
+        }
+        else {
+            callback(question.false);
+        }
+    });
+}
+
 function parseAnswer(callback) {
     var answer = document.getElementsByName('answer');
     var parseArray = new Array();
