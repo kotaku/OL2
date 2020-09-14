@@ -30,7 +30,7 @@ function checkAnswerAny(number, answers, callback) {
         var question = JSON.parse(response)[number];
         if (Array.isArray(answers) &&
             Array.isArray(question.answers) &&
-            answers.some((val, index) => val === question.answers[index])) {
+            answers.some(val => question.answers.indexOf(val) >= 0)) {
             callback(question.true);
         }
         else {
